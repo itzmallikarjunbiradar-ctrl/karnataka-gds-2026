@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karnataka GDS 2026 Selection & Merit Analyzer</title>
+  <meta name="description" content="Calculate your Karnataka GDS 2026 selection chance, compare 10th marks with reference cutoffs, and view division rankings.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky Government Portal Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">GDS</div>
+        <div class="brand-text">
+          <b>Karnataka GDS 2026</b>
+          <span>Selection & Merit Analyzer</span>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="posts.html" class="nav-link">All Posts</a>
+        <a href="merit.html" class="nav-link">Merit Analysis</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Hero & Input Form -->
+    <section class="hero-wrapper">
+      <div class="hero-info">
+        <span class="page-badge">Official Helper Portal • 2026 Cycle</span>
+        <h1>Check your GDS<em>selection chances</em></h1>
+        <p class="hero-description">
+          Gramin Dak Sevak (GDS) recruitment is purely merit-based on 10th Standard (SSLC/Matriculation) marks. Enter your score and category to analyze your competitive standing across all 38 Karnataka postal divisions.
+        </p>
+        
+        <div class="stats-grid" style="margin-bottom: 0;">
+          <div class="stat-card">
+            <div class="stat-card-label">Total Vacancies</div>
+            <div class="stat-card-value">1,115</div>
+            <div class="stat-card-desc">Karnataka Postal Circle</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Divisions</div>
+            <div class="stat-card-value">38</div>
+            <div class="stat-card-desc">Postal & RMS Divisions</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Input Card -->
+      <div class="input-card">
+        <h2 class="input-card-title">
+          <span>🎯</span> Enter Your GDS Details
+        </h2>
+        <p class="input-card-subtitle">Fast division-wise chance calculation & ranking</p>
+
+        <!-- Validation Alert Banner -->
+        <div id="errorAlert" class="alert-error" role="alert">
+          Please enter a valid 10th percentage between 0 and 100.
+        </div>
+
+        <form id="analyzerForm" novalidate>
+          <div class="form-group">
+            <label for="percentage" class="form-label">
+              10th Percentage <span class="req">*</span>
+            </label>
+            <input 
+              type="number" 
+              id="percentage" 
+              name="percentage"
+              class="input-field" 
+              min="0" 
+              max="100" 
+              step="0.01" 
+              placeholder="e.g. 90.56" 
+              required
+              autocomplete="off"
+            >
+            <span class="input-hint">Enter your exact 10th SSLC/CBSE percentage (0 - 100)</span>
+          </div>
+
+          <div class="form-group">
+            <label for="category" class="form-label">
+              Reservation Category <span class="req">*</span>
+            </label>
+            <select id="category" name="category" class="select-field" required>
+              <option value="OBC" selected>OBC (Other Backward Classes)</option>
+              <option value="UR">UR (Unreserved / General)</option>
+              <option value="SC">SC (Scheduled Caste)</option>
+              <option value="ST">ST (Scheduled Tribe)</option>
+              <option value="EWS">EWS (Economically Weaker Section)</option>
+              <option value="PwD">PwD (Persons with Disabilities)</option>
+            </select>
+            <span class="input-hint">Vacancies and merit cutoffs are evaluated per category</span>
+          </div>
+
+          <button type="submit" id="analyzeBtn" class="btn-primary">
+            ANALYZE →
+          </button>
+        </form>
+
+        <p style="font-size: 11.5px; color: var(--text-light); margin: 16px 0 0; text-align: center; line-height: 1.5;">
+          Clicking Analyze navigates to your personalized division ranking report.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Selection Method Information -->
+    <section class="info-section">
+      <h3 class="section-heading">How GDS Merit Selection Operates</h3>
+      <p class="section-subheading">Understanding Karnataka circle vacancy allocation and cutoff trends</p>
+
+      <div class="cards-grid-3">
+        <div class="feature-box">
+          <b>1. 10th Standard Marks Only</b>
+          <p>There is no written exam or interview. Selection is generated automatically in order of merit from 10th board marks aggregated to 4 decimal places.</p>
+        </div>
+        <div class="feature-box">
+          <b>2. Division & Category Preference</b>
+          <p>Candidates can apply to multiple posts within their chosen division. UR seats are open to all, while reserved seats require valid caste/category certificates.</p>
+        </div>
+        <div class="feature-box">
+          <b>3. Estimated Chance Analysis</b>
+          <p>Our tool evaluates your marks against Karnataka's 1,115 vacancies and historical baseline cutoffs to highlight divisions with the highest probability.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Navigation to other pages -->
+    <div class="actions-banner">
+      <a href="posts.html" class="action-card">
+        <div>
+          <b>Explore All Karnataka Posts</b>
+          <p>View complete breakdown of 1,115 vacancies across all 38 divisions</p>
+        </div>
+        <div class="action-icon">→</div>
+      </a>
+      <a href="merit.html" class="action-card">
+        <div>
+          <b>View Merit Cutoff Analysis</b>
+          <p>Compare division and category historical cutoff benchmarks</p>
+        </div>
+        <div class="action-icon">→</div>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Portal Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <b>Karnataka GDS 2026 Selection Analyzer</b> • Unofficial informational helper portal.
+        Vacancy figures are transcribed from available notification data. This analysis is an estimate and not an official India Post selection guarantee. Always verify details on the official India Post GDS Online portal.
+      </div>
+      <div>
+        <span>© 2026 GDS Helper Tool</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
