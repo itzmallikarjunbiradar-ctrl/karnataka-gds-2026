@@ -1,0 +1,1064 @@
+/* ==========================================================================
+   Karnataka GDS 2026 Selection Analyzer - Modern Government Portal Theme
+   Dark Green Primary • Crisp White • Professional Cards • Responsive
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Brand colors */
+  --gov-green-dark: #09371d;
+  --gov-green-primary: #0f5132;
+  --gov-green-medium: #198754;
+  --gov-green-light: #e8f5e9;
+  --gov-green-tint: #f1f8f3;
+  --gov-gold: #b45309;
+  --gov-gold-light: #fef3c7;
+
+  /* Neutral tones */
+  --bg-page: #f8faf9;
+  --bg-card: #ffffff;
+  --bg-card-muted: #fbfcfb;
+  --border-subtle: #e2e8e3;
+  --border-focus: #198754;
+
+  /* Text colors */
+  --text-main: #141e17;
+  --text-muted: #576359;
+  --text-light: #839185;
+  --text-inverse: #ffffff;
+
+  /* Status badges */
+  --status-good-bg: #d1fae5;
+  --status-good-text: #065f46;
+  --status-good-border: #a7f3d0;
+
+  --status-mid-bg: #fef3c7;
+  --status-mid-text: #92400e;
+  --status-mid-border: #fde68a;
+
+  --status-low-bg: #fee2e2;
+  --status-low-text: #991b1b;
+  --status-low-border: #fecaca;
+
+  /* Shadows & Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 16px rgba(15, 81, 50, 0.08);
+  --shadow-lg: 0 10px 30px rgba(15, 81, 50, 0.12);
+  --shadow-xl: 0 20px 45px rgba(15, 81, 50, 0.16);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Header & Sticky Navigation
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--gov-green-dark), var(--gov-green-primary));
+  color: #fff;
+  border-radius: var(--radius-md);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(15, 81, 50, 0.25);
+}
+
+.brand-text b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gov-green-dark);
+  line-height: 1.2;
+}
+
+.brand-text span {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--gov-green-primary);
+  background: var(--gov-green-light);
+}
+
+.nav-link.active {
+  color: var(--gov-green-dark);
+  background: var(--gov-green-light);
+  font-weight: 700;
+  position: relative;
+}
+
+/* ==========================================================================
+   Common Layout & Container
+   ========================================================================== */
+.main-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 24px 72px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: var(--gov-green-light);
+  color: var(--gov-green-primary);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: var(--gov-green-dark);
+  line-height: 1.15;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+}
+
+.page-title em {
+  font-style: normal;
+  color: var(--gov-green-medium);
+}
+
+.page-subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Home Hero & Input Card (index.html)
+   ========================================================================== */
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 48px;
+  padding: 40px;
+  background: linear-gradient(135deg, #ffffff 0%, var(--gov-green-tint) 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-info h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 800;
+  color: var(--gov-green-dark);
+  line-height: 1.08;
+  letter-spacing: -1px;
+  margin: 12px 0 16px;
+}
+
+.hero-info h1 em {
+  font-style: normal;
+  color: var(--gov-green-primary);
+  display: block;
+}
+
+.hero-description {
+  font-size: 15.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+/* Input Form Card */
+.input-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.input-card-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gov-green-dark);
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-card-subtitle {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin: 0 0 22px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.form-label span.req {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.input-field, .select-field {
+  width: 100%;
+  padding: 13px 16px;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  color: var(--text-main);
+  background: var(--bg-card-muted);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus, .select-field:focus {
+  border-color: var(--gov-green-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(15, 81, 50, 0.12);
+}
+
+.input-hint {
+  font-size: 11.5px;
+  color: var(--text-light);
+  margin-top: 6px;
+  display: block;
+}
+
+.btn-primary {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--gov-green-primary), var(--gov-green-dark));
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(15, 81, 50, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(15, 81, 50, 0.38);
+  background: linear-gradient(135deg, #13653f, var(--gov-green-dark));
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gov-green-dark);
+  background: #ffffff;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--gov-green-light);
+  border-color: var(--gov-green-medium);
+  color: var(--gov-green-primary);
+}
+
+.alert-error {
+  display: none;
+  background: var(--status-low-bg);
+  border: 1px solid var(--status-low-border);
+  color: var(--status-low-text);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+/* ==========================================================================
+   Key Metrics & Stat Cards
+   ========================================================================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.stat-card-value {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--gov-green-dark);
+  line-height: 1.1;
+}
+
+.stat-card-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* ==========================================================================
+   Features / Guidelines Grid
+   ========================================================================== */
+.info-section {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  margin-bottom: 40px;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gov-green-dark);
+  margin: 0 0 8px;
+}
+
+.section-subheading {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 28px;
+}
+
+.cards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-box {
+  background: var(--bg-card-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+
+.feature-box b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--gov-green-dark);
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Result Page Specific (result.html)
+   ========================================================================== */
+.profile-banner {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 28px 36px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.profile-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.profile-value {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--gov-green-dark);
+}
+
+.profile-pill {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--gov-green-light);
+  color: var(--gov-green-primary);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+/* Chance Showcase Card */
+.chance-hero-card {
+  background: linear-gradient(135deg, var(--gov-green-dark) 0%, #0d4424 60%, #155c34 100%);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 44px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-xl);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.chance-hero-card::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.gauge-circle {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--gov-green-medium) calc(var(--chance-pct, 50) * 1%), rgba(255, 255, 255, 0.15) 0);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+.gauge-inner {
+  width: 100%;
+  height: 100%;
+  background: var(--gov-green-dark);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.gauge-score {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.gauge-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+.chance-details h2 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.chance-verdict-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-strong {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.badge-good {
+  background: #34d399;
+  color: #064e3b;
+}
+
+.badge-mid {
+  background: #fbbf24;
+  color: #78350f;
+}
+
+.badge-low {
+  background: #f87171;
+  color: #7f1d1d;
+}
+
+.chance-summary-text {
+  font-size: 15px;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  max-width: 650px;
+}
+
+.official-disclaimer {
+  background: rgba(0, 0, 0, 0.25);
+  border-left: 4px solid #fbbf24;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  color: #f1f5f9;
+  line-height: 1.55;
+}
+
+.official-disclaimer b {
+  color: #fbbf24;
+  display: inline;
+}
+
+/* ==========================================================================
+   Table Components & Toolbars
+   ========================================================================== */
+.table-container-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 36px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.toolbar-title h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gov-green-dark);
+  margin: 0 0 4px;
+}
+
+.toolbar-title p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.toolbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  width: 220px;
+  padding: 9px 14px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  background: var(--bg-card-muted);
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--gov-green-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(15, 81, 50, 0.1);
+}
+
+.filter-select {
+  padding: 9px 14px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  background: var(--bg-card-muted);
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: var(--gov-green-primary);
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 780px;
+}
+
+.data-table th {
+  background: #f8faf9;
+  color: var(--text-muted);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 14px 16px;
+  border-bottom: 2px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 14px 16px;
+  font-size: 13.5px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover td {
+  background: #f9fbf9;
+}
+
+/* Status Pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.pill-good {
+  background: var(--status-good-bg);
+  color: var(--status-good-text);
+  border: 1px solid var(--status-good-border);
+}
+
+.pill-mid {
+  background: var(--status-mid-bg);
+  color: var(--status-mid-text);
+  border: 1px solid var(--status-mid-border);
+}
+
+.pill-low {
+  background: var(--status-low-bg);
+  color: var(--status-low-text);
+  border: 1px solid var(--status-low-border);
+}
+
+.pill-neutral {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.rank-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gov-green-light);
+  color: var(--gov-green-dark);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.rank-top {
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   Action CTA Banners
+   ========================================================================== */
+.actions-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.action-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.action-card:hover {
+  border-color: var(--gov-green-medium);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.action-card b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--gov-green-dark);
+  margin-bottom: 4px;
+}
+
+.action-card p {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.action-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--gov-green-light);
+  color: var(--gov-green-primary);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Fallback / Empty State Card
+   ========================================================================== */
+.empty-state-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 64px 32px;
+  text-align: center;
+  max-width: 580px;
+  margin: 40px auto;
+  box-shadow: var(--shadow-md);
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--status-mid-bg);
+  color: var(--status-mid-text);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+}
+
+.empty-state-card h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--gov-green-dark);
+  margin: 0 0 10px;
+}
+
+.empty-state-card p {
+  color: var(--text-muted);
+  font-size: 14.5px;
+  margin: 0 0 28px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-subtle);
+  padding: 40px 24px 32px;
+  margin-top: 60px;
+  color: var(--text-muted);
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-disclaimer {
+  max-width: 800px;
+}
+
+.footer-disclaimer b {
+  color: var(--gov-green-dark);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 960px) {
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 32px;
+  }
+
+  .chance-hero-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 32px 24px;
+    gap: 28px;
+  }
+
+  .gauge-circle {
+    margin: 0 auto;
+  }
+
+  .chance-details h2 {
+    font-size: 26px;
+  }
+
+  .chance-summary-text {
+    margin: 0 auto 20px;
+  }
+
+  .cards-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 680px) {
+  .header-container {
+    padding: 0 16px;
+  }
+
+  .nav-menu {
+    gap: 4px;
+  }
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 12.5px;
+  }
+
+  .main-content {
+    padding: 20px 16px 48px;
+  }
+
+  .hero-wrapper {
+    padding: 20px;
+  }
+
+  .input-card {
+    padding: 22px;
+  }
+
+  .profile-banner {
+    padding: 20px;
+  }
+
+  .profile-info {
+    gap: 18px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input, .filter-select {
+    width: 100%;
+  }
+
+  .table-container-card {
+    padding: 18px 14px;
+  }
+
+  .actions-banner {
+    grid-template-columns: 1fr;
+  }
+}
